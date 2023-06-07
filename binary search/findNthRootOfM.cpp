@@ -20,3 +20,10 @@ int NthRoot(int n, int m) {
   return lo;
 }
 
+int main(){
+  int n, m;
+  cin>>n>>m;
+  NthRoot(n,m);
+  return 0;
+}
+

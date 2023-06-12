@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 int search(int* arr, int n, int key) {
     int lo = 0, hi = n-1, mid;
     while(lo <= hi){
@@ -18,3 +21,13 @@ int search(int* arr, int n, int key) {
     }
     return -1;
 }
+
+ int main(){
+ int n;
+ cin>>n;
+ int arr[n];
+ for(int i = 0; i < n; i++)
+ cin>>arr[i];
+ cout<<search(arr);
+ return 0;
+ }

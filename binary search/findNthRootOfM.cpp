@@ -23,7 +23,7 @@ int NthRoot(int n, int m) {
 int main(){
   int n, m;
   cin>>n>>m;
-  NthRoot(n,m);
+  cout<<NthRoot(n,m);
   return 0;
 }
 

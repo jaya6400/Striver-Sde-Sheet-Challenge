@@ -43,3 +43,14 @@ int matrixMultiplication(vector<int> &arr, int N)
     }
     return dp[1][N-1];
 }
+
+ int main(){
+ int n;
+ cin>>n;
+ 
+ vector<int> arr(n);
+ for(int i = 0; i < n; i++)
+ cin>>arr[i];
+ cout<<matrixMultiplication(arr,n);
+//return 0;
+ }

@@ -3,7 +3,7 @@ int minSumPath(vector<vector<int>> &grid) {
    //bottom up, tc = o(n*m), sc = o(n*m) for external array
        int n = grid.size();
        int m = grid[0].size();
-        vector<vector<int>> dp(n, vector<int> (m,-1));
+        vector<vector<int>> dp(n, vector<int> (m, 0));
        int up, left;
        for(int i = 0; i < n; i++){
           for(int j = 0; j < m; j++){
@@ -57,3 +57,13 @@ int minSumPath(vector<vector<int>> &grid) {
     //    }
     //    return p[m-1];
 }
+ int main(){
+ int n, m;
+ cin>>n>>m;
+ vector<vector<int>> arr(n, vector<int> (m, 0);
+ for(int i = 0; i < n; i++)
+    for(int j = 0; j < m; j++)
+        cin>>arr[i][j];
+ cout<<minSumPath(arr);
+//return 0;
+ }

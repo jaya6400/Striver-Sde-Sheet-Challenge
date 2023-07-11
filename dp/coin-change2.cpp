@@ -21,6 +21,16 @@ for(int ind = 1; ind < n; ind++){
 return dp[n-1][value];
 }
 
+int main(){
+ int n, value;
+ cin>>n>>value;
+ int *arr;
+ for(int i = 0; i < n; i++)
+        cin>>arr[i];
+ cout<<countWaysToMakeChange(arr, n, value);
+//return 0;
+ }
+
 // long recur(int *denominations, int ind, int val, vector<vector<long>> &dp){
 //memorization / bottom up , tc=o(n*t) sc = o(n*t) + o(n)
 // if(ind == 0)

@@ -1,6 +1,7 @@
 #include <bits/stdc++.h> 
+
 bool subsetSumToK(int n, int k, vector<int> &arr) {
-    //using tabulation(top-down) tc = o(n*val) sc = o(n*val)
+    //using tabulation(bottum-up) tc = o(n*val) sc = o(n*val)
     vector<vector<bool>> dp(n+1, vector<bool> (k+1, false));
     for(int i = 0; i < n; i++)
         dp[i][0] = true; //for k==0 return true
@@ -56,7 +57,7 @@ bool subsetSumToK(int n, int k, vector<int> &arr) {
 //     return prevRow[k];
 // }
 
-   //using memoization(bottom-up) tc= o(n*val) sc= o(n*val) + o(n)
+   //using memoization(top-down) tc= o(n*val) sc= o(n*val) + o(n)
 // bool recur(int ind, int val, vector<int> &arr, vector<vector<int>> &dp){
     // if(val == 0) return true;
     // if(ind == 0) return arr[0] == val;

@@ -1,7 +1,7 @@
 #include <bits/stdc++.h> 
 
 int recur(vector<int> &arr, int i, int j, vector<vector<int>> &dp){
-    //using dp
+    //using memoization/top-down
     // int minians = INT_MAX;
     // if(i == j) return 0;
 

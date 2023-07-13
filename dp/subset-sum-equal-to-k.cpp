@@ -1,5 +1,4 @@
 #include <bits/stdc++.h> 
-
 bool subsetSumToK(int n, int k, vector<int> &arr) {
     //using tabulation(top-down) tc = o(n*val) sc = o(n*val)
     vector<vector<bool>> dp(n+1, vector<bool> (k+1, false));
@@ -21,6 +20,15 @@ bool subsetSumToK(int n, int k, vector<int> &arr) {
        }
     return dp[n-1][k];
 }
+ int main(){
+ int n, k;
+ cin>>n>>k;
+ vector<int> arr(n);
+ for(int i = 0; i < n; i++)
+        cin>>arr[i];
+ cout<<subsetSumToK(n, k, arr);
+//return 0;
+ }
 
 //space optimization tc = o(n*val) sc = o(k)
 // bool subsetSumToK(int n, int k, vector<int> &arr) {
@@ -47,9 +55,9 @@ bool subsetSumToK(int n, int k, vector<int> &arr) {
 //     }
 //     return prevRow[k];
 // }
-// bool recur(int ind, int val, vector<int> &arr, vector<vector<int>> &dp){
-    //using memoization(bottom-up) tc= o(n*val) sc= o(n*val) + o(n)
 
+   //using memoization(bottom-up) tc= o(n*val) sc= o(n*val) + o(n)
+// bool recur(int ind, int val, vector<int> &arr, vector<vector<int>> &dp){
     // if(val == 0) return true;
     // if(ind == 0) return arr[0] == val;
 
@@ -81,6 +89,7 @@ bool subsetSumToK(int n, int k, vector<int> &arr) {
     // }
     // return notTake || take;
 //}
+
 // bool subsetSumToK(int n, int k, vector<int> &arr) {
 //     vector<vector<int>> dp(n+1, vector<int> (k+1, -1));
 //     return recur(n-1, k, arr, dp);

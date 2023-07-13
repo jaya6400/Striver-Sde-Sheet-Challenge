@@ -1,6 +1,6 @@
 #include <bits/stdc++.h> 
 int minSumPath(vector<vector<int>> &grid) {
-   //bottom up, tc = o(n*m), sc = o(n*m) for external array
+   //tabulation/bottom-up, tc = o(n*m), sc = o(n*m) for external array
        int n = grid.size();
        int m = grid[0].size();
         vector<vector<int>> dp(n, vector<int> (m, 0));

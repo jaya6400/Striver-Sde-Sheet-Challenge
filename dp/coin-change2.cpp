@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 
 long countWaysToMakeChange(int *denominations, int n, int value) 
-{ // tabulation top down, tc=o(n*t) sc = o(n*t)
+{ // tabulation bottom-up, tc=o(n*t) sc = o(n*t)
   vector<vector<long>> dp(n, vector<long>(value + 1, 0));
   // base case
   for (int i = 0; i <= value; i++)
@@ -32,7 +32,7 @@ int main(){
  }
 
 // long recur(int *denominations, int ind, int val, vector<vector<long>> &dp){
-//memorization / bottom up , tc=o(n*t) sc = o(n*t) + o(n)
+//memorization / top-down, tc=o(n*t) sc = o(n*t) + o(n)
 // if(ind == 0)
 // return (val%denominations[0] == 0);
 

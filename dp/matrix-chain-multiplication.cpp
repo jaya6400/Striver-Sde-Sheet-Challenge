@@ -1,35 +1,8 @@
 #include <bits/stdc++.h> 
-
-int recur(vector<int> &arr, int i, int j, vector<vector<int>> &dp){
-    //using memoization/top-down
-    // int minians = INT_MAX;
-    // if(i == j) return 0;
-
-    // if(dp[i][j] != -1)
-    // return dp[i][j];
-
-    // for(int k = i; k < j; k++){
-    //     int ans = recur(arr, i, k, dp) + recur(arr, k+1, j, dp) 
-    //                 + arr[i-1]*arr[k]*arr[j];
-    //     minians = min(minians, ans);
-    // }
-
-    // return minians;
-    
-    //using recursion
-    // int minians = INT_MAX;
-    // if(i == j) return 0;
-    // for(int k = i; k < j; k++){
-    //     //calculate the ans for each step
-    //     int ans = recur(arr, i, k) + recur(arr, k+1, j) + arr[i-1]*arr[k]*arr[j];
-    //     minians = min(ans, minians);
-    // }
-    // return minians;
-}
 int matrixMultiplication(vector<int> &arr, int N)
 {
-    vector<vector<int>> dp(N, vector<int> (N));
     //using bottum up(tabulation)
+    vector<vector<int>> dp(N, vector<int> (N));
     for(int i = 1; i < N; i++)
     dp[i][i] = 0;
     for(int i = N-1; i >= 1; i--) //as we are doing bottum up i is running from N-1 to 1
@@ -54,3 +27,30 @@ int matrixMultiplication(vector<int> &arr, int N)
  cout<<matrixMultiplication(arr,n);
 //return 0;
  }
+
+ //using memoization/top-down
+//int recur(vector<int> &arr, int i, int j, vector<vector<int>> &dp){
+    // int minians = INT_MAX;
+    // if(i == j) return 0;
+
+    // if(dp[i][j] != -1)
+    // return dp[i][j];
+
+    // for(int k = i; k < j; k++){
+    //     int ans = recur(arr, i, k, dp) + recur(arr, k+1, j, dp) 
+    //                 + arr[i-1]*arr[k]*arr[j];
+    //     minians = min(minians, ans);
+    // }
+
+    // return minians;
+    
+    //using recursion
+    // int minians = INT_MAX;
+    // if(i == j) return 0;
+    // for(int k = i; k < j; k++){
+    //     //calculate the ans for each step
+    //     int ans = recur(arr, i, k) + recur(arr, k+1, j) + arr[i-1]*arr[k]*arr[j];
+    //     minians = min(ans, minians);
+    // }
+    // return minians;
+//}

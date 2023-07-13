@@ -34,23 +34,22 @@ bool subsetSumToK(int n, int k, vector<int> &arr) {
 //space optimization tc = o(n*val) sc = o(k)
 // bool subsetSumToK(int n, int k, vector<int> &arr) {
 //     vector<bool> prevRow(k+1, false);
-
+//    vector<bool> currRow(k+1, false);
 //     prevRow[0] = true; //for k==0 return true
 
 //         if(arr[0] <= k)
 //            prevRow[arr[0]] = true; // ind == 0 return arr[0]==k
 
 //     for(int i = 1; i <= n; i++){
-//         vector<bool> currRow(k+1, false);
 //         currRow[0] = true;
 //         for (int j = 1; j <= k; j++) {
-//           bool notTake = prevRow[j];
+//           bool notTake = prevRow[j]; //dp[i-1][j] denotes prevRow
 //           bool take = false;
 
 //           if (arr[i] <= j)
 //             take = prevRow[j - arr[i]];
 
-//           currRow[j] = take || notTake;
+//           currRow[j] = take || notTake; //dp[i][j] denotes currRow
 //         }
 //         prevRow = currRow;
 //     }

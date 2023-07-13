@@ -1,5 +1,5 @@
 //TC = o(i*j) array + **O(i+j) stack space**
-//memorization
+//memorization/top-down
  int helper(string word1, string word2, int i, int j, vector<vector<int>> &dp){
         if(i < 0)
             return j+1;
@@ -12,7 +12,7 @@
         else
             return dp[i][j] = 1+min(helper(word1, word2, i-1, j-1, dp), min(helper(word1, word2, i, j-1, dp), helper(word1, word2, i-1, j, dp)));
     }
-// tc - O(N*M) sc - O(M)
+// tabulation/bottom-up, tc - O(N*M) sc - O(M)
 // int helper(string &word1, string &word2){
 //     int n = word1.size();
 //     int m = word2.size();

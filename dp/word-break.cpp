@@ -10,21 +10,19 @@ bool stringCheck(vector < string > & arr, int n, string target){
 }
 
 bool wordBreak(vector < string > & arr, int n, string target) {
-    int size = target.size();
-    vector<bool> dp(size+1, false);
-     for(int i = 1; i <= size; i++){
-         if(dp[i] == false && stringCheck(arr, n, target.substr(0, i)))
-            dp[i] = true;
-         if(dp[i] == true){
-             if(i == size) return true;
-             for(int j = i+1; j <= size; j++){
-                if(dp[j] == false && stringCheck(arr, n, target.substr(i, j-i)))
-                    dp[j] = true;
-             }
-         }
+     int s_size = target.size();
+     vector<bool> dp(s_size+1, false);
+      dp[0] = true;
+      for(int ind = 1; ind <= s_size; ind++)
+        for(int j = 0; j < ind; j++){
+           if(dp[j] == true && stringCheck(arr, n, target.substr(j, ind-j))){
+            dp[ind] = true;
+             break;
+          }
      }
-     return false;
-}
+     return dp[s_size];
+ }
+
 
 //recursive solution with TLE, tc= 2^n sc = o(n)+o(n)[stack space]
 // bool stringCheck(vector < string > & arr, int n, string target){

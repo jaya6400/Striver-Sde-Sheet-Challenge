@@ -1,6 +1,6 @@
 #include <bits/stdc++.h> 
 
-//using kandane's algo, tc= o(n), sc = o(n)
+//using kandane's algo, tc= o(n), sc = o(1)
 int maximumProduct(vector<int> &arr, int n){   
 //here we have to keep track of 
 //1. max of positive elements

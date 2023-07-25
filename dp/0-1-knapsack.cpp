@@ -10,8 +10,8 @@ int maxProfit(vector<int> &values, vector<int> &weights, int n, int w)
 
 	for(int ind = n-2; ind >= 0; ind--)
 	{
-		for(int we = w; we >= 0; we--){
-           int nottake = 0 + dp[ind+1][we];
+            for(int we = w; we >= 0; we--){
+                   int nottake = 0 + dp[ind+1][we];
 		   int take = INT_MIN;
 		   if(weights[ind] <= we)
 		   take = values[ind] + dp[ind+1][we-weights[ind]];
@@ -32,8 +32,8 @@ int maxProfit(vector<int> &values, vector<int> &weights, int n, int w)
 
 // 	for(int ind = n-2; ind >= 0; ind--)
 // 	{
-// 		for(int we = w; we >= 0; we--){
-//            int nottake = 0 + curr[we];
+//         for(int we = w; we >= 0; we--){
+//                 int nottake = 0 + curr[we];
 // 		   int take = INT_MIN;
 // 		   if(weights[ind] <= we)
 // 		   take = values[ind] + curr[we-weights[ind]];

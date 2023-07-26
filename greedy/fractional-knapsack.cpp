@@ -4,7 +4,7 @@ bool comp(pair<int, int> a, pair<int, int> b){
 double c1 = (double)a.second/(double)a.first;
 double c2 = (double)b.second/(double)b.first;
 
-return c1>c2;
+return c1>c2; //whose val/weight will be more in the all pairs, items array will be sorted in that order
 }
 //tc = o(nlogn + n) , o(nlogn) for sorting, o(n) for looping 
 double maximumValue (vector<pair<int, int>>& items, int n, int w)
